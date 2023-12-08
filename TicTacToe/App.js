@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
 import Board from './components/Board';
@@ -49,8 +48,8 @@ const App = () => {
   };
 
   const getRandomColor = () => {
-    const colors = ['#FF5733', '#33FF7A', '#336CFF', '#FF33E9', '#E9FF33']; // Mảng các màu sắc
-    return colors[Math.floor(Math.random() * colors.length)]; // Chọn ngẫu nhiên một màu từ mảng
+    const colors = ['#FF5733', '#33FF7A', '#336CFF', '#FF33E9', '#E9FF33'];
+    return colors[Math.floor(Math.random() * colors.length)];
   };
 
   let status;

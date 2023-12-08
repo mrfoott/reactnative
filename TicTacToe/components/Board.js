@@ -1,4 +1,3 @@
-// components/Board.js
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Square from './Square';
