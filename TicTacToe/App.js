@@ -47,11 +47,7 @@ const App = () => {
     setWinner(null);
   };
 
-  const getRandomColor = () => {
-    const colors = ['#FF5733', '#33FF7A', '#336CFF', '#FF33E9', '#E9FF33'];
-    return colors[Math.floor(Math.random() * colors.length)];
-  };
-
+  let statusColor = '#001F3F';
   let status;
   if (winner === 'draw') {
     status = (
@@ -59,15 +55,22 @@ const App = () => {
         Hòa
       </Text>
     );
-  } else if (winner) {
+  } else if (winner === 'O') {
+    statusColor = '#33FF7A';
+    status = (
+      <Text style={[styles.status, { color: statusColor }]}>
+        Người chiến thắng: O
+      </Text>
+    );
+  } else if (winner === 'X') {
     status = (
       <Text style={[styles.status, { color: '#FF4136' }]}>
-        Người chiến thắng: {winner}
+        Người chiến thắng: X
       </Text>
     );
   } else {
     status = (
-      <Text style={[styles.status, { color: '#001F3F' }]}>
+      <Text style={[styles.status, { color: statusColor }]}>
         Lượt kế tiếp: {xIsNext ? 'Người Chơi 1' : 'Người Chơi 2'}
       </Text>
     );

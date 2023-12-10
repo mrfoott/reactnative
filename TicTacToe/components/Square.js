@@ -2,11 +2,11 @@ import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 const Square = ({ value, onPress }) => {
-  let textColor = '#000';
+  let textColor = '#000'; // Màu mặc định
   if (value === 'X') {
-    textColor = 'red';
+    textColor = 'red'; // Màu đỏ cho 'X'
   } else if (value === 'O') {
-    textColor = 'green';
+    textColor = 'green'; // Màu xanh lá cây cho 'O'
   }
 
   return (
